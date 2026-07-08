@@ -27,12 +27,12 @@ Telegram交流反馈群组：https://t.me/eooceu
 
 ## VPS一键四协议安装脚本
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/eooce/sing-box/main/sing-box.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/Otherworldy/sing-box/main/sing-box.sh)
 ```
 ## vps带端口变量运行示列(NAT机)
 PORT=开放的端口 确保后面有3个端口可用
 ```
-PORT=你的端口 bash <(curl -Ls https://raw.githubusercontent.com/eooce/sing-box/main/sing-box.sh)
+PORT=你的端口 bash <(curl -Ls https://raw.githubusercontent.com/Otherworldy/sing-box/main/sing-box.sh)
 ```
 
 
