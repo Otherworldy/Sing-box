@@ -145,6 +145,11 @@ manage_packages() {
 
 # 获取ip
 get_realip() {
+   if [ -n "$SERVER_IP" ]; then
+       [[ "$SERVER_IP" == *:* && "$SERVER_IP" != \[*\] ]] && echo "[$SERVER_IP]" || echo "$SERVER_IP"
+       return
+   fi
+   
     ip=$(curl -4 -sm 2 ip.sb)
     ipv6() { curl -6 -sm 2 ip.sb; }
     if [ -z "$ip" ]; then
