@@ -534,6 +534,8 @@ get_info() {
         awk -F\" '{c="";o="";for(x=1;x<=NF;x++){if($x=="country_code")c=$(x+2);if($x=="org")o=$(x+2)};if(c&&o)print c"-"o}' | \
         sed 's/ /_/g' || echo "$hostname")
 
+    isp="${NODE_NAME:-$isp}"
+
     if [ -f "${work_dir}/argo.log" ]; then
         for i in {1..5}; do
             purple "第 $i 次尝试获取ArgoDoamin中..."
